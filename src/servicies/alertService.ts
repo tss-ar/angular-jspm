@@ -1,5 +1,5 @@
-﻿import {AlertType} from 'entities';
-import {IAlertService} from './ialertService';
+﻿import {AlertType} from 'tss-angular/entities';
+import {IAlertService} from './iAlertService';
 
 /*@ngInject*/
 export class AlertService implements IAlertService {

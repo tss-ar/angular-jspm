@@ -1,4 +1,4 @@
-var entities_1 = require('entities');
+var entities_1 = require('tss-angular/entities');
 /*@ngInject*/
 function feedback() {
     return {
