@@ -1,13 +1,13 @@
 {
   "name": "tss-angular-jspm",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matias Ribichich",
   "license": "ISC",
   "description": "",
-  "main": "dist/angular/index.js",
+  "main": "dist/app/index.js",
   "format": "cjs",
   "registry": "jspm",
   "devDependencies": {
@@ -16,6 +16,6 @@
   },
 
     "typescript": {
-        "definition": "dist/angular/index.d.ts"
+        "definition": "dist/app/index.d.ts"
     }
 }
