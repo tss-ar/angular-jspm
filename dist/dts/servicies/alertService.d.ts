@@ -1,5 +1,8 @@
 import { AlertType } from 'tss-angular/entities';
-import { IAlertService } from './iAlertService';
+export interface IAlertService {
+    add(type: AlertType, msg: string, autoClose: boolean): any;
+    closeAlert(alert: any): any;
+}
 export declare class AlertService implements IAlertService {
     private $rootScope;
     private $timeout;

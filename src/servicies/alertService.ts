@@ -1,5 +1,9 @@
 ﻿import {AlertType} from 'tss-angular/entities';
-import {IAlertService} from './iAlertService';
+
+export interface IAlertService {
+    add(type: AlertType, msg: string, autoClose: boolean);
+    closeAlert(alert);
+}
 
 /*@ngInject*/
 export class AlertService implements IAlertService {

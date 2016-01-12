@@ -1,4 +1,4 @@
 import './app';
 
 export * from './entities';
-export * from './servicies';
+export {IAlertService} from './servicies/alertService';

@@ -3,6 +3,5 @@ function __export(m) {
 }
 __export(require('./servicies/rcDisabled'));
 __export(require('./servicies/alertService'));
-__export(require('./servicies/iAlertService'));
 
 //# sourceMappingURL=servicies.js.map
