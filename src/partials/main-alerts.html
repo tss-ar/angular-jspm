@@ -1,0 +1,5 @@
+﻿<div class="main-alerts-overlay" ng-cloak>
+    <div class="container">
+        <alert class="main-alert" ng-repeat="alert in alerts" type="{{alert.type}}" close="alert.close()">{{ alert.msg }}</alert>
+    </div>
+</div>

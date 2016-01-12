@@ -1,4 +1,4 @@
-import { FeedbackType } from './FeedbackType';
+import { FeedbackType } from './feedbackType';
 export declare class Feedback {
     isWorking: boolean;
     text: string;

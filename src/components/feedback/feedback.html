@@ -1,0 +1,21 @@
+﻿
+<img src="/Content/Images/loader_16.gif" ng-if="feedback.isWorking" />
+
+<span ng-if="feedback.text || feedback.type !== feedbackType.None">
+    &nbsp;
+    <span class="text-info" ng-if="feedback.type === feedbackType.Info">
+        {{feedback.text}}
+    </span>
+    <span class="text-success" ng-if="feedback.type === feedbackType.Success">
+        <span class="glyphicon glyphicon-ok"></span>&nbsp;
+        {{feedback.text}}
+    </span>
+    <span class="text-danger" ng-if="feedback.type === feedbackType.Error">
+        <span class="glyphicon glyphicon-remove" tooltip="{{feedback.text}}" tooltip-placement="top" tooltip-append-to-body="true" ng-if="showErrorAsTooltip"></span>
+        <span class="glyphicon glyphicon-remove" ng-if="!showErrorAsTooltip"></span>
+        <span ng-if="showError">&nbsp;{{feedback.text}}</span>
+    </span>
+    <span class="text-info" ng-if="feedback.type === feedbackType.None">
+        {{feedback.text}}
+    </span>
+</span>

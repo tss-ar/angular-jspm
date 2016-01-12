@@ -1,0 +1,10 @@
+﻿<span ng-transclude></span>&nbsp;
+
+<span ng-if="sortingcolumn == column">
+    <i class="fa fa-sort-asc" ng-if="!sortingdirection"></i>
+    <i class="fa fa-sort-desc" ng-if="sortingdirection"></i>
+</span>
+ 
+<span ng-if="sortingcolumn != column">
+    <i class="fa fa-sort" style="color: #828282; color: rgba(130, 130, 130, 0.5);"></i>
+</span>

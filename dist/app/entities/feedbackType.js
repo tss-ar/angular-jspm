@@ -1,4 +1,3 @@
-'use strict';
 (function (FeedbackType) {
     FeedbackType[FeedbackType["None"] = 0] = "None";
     FeedbackType[FeedbackType["Info"] = 1] = "Info";
