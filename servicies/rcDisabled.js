@@ -7,7 +7,7 @@ var RcDisabledProvider = (function () {
         isDisabled = isDisabled ? isDisabled : false;
         var jqElement2 = jqElement
             .find(':not([rc-disabled])')
-            .filter('.btn, li, input, button, select, md-checkbox, md-select, textarea, md-radio-button, md-switch')
+            .filter('.btn, li, input, button, select, md-checkbox, md-select, textarea, md-radio-button, md-switch, md-autocomplete')
             .filter(':not([ng-disabled])')
             .filter(function (index) {
             return jQuery(this).parents().not(jqElement).filter('[rc-disabled]').length === 0;
@@ -19,7 +19,7 @@ var RcDisabledProvider = (function () {
             jqElement2.find('[data-loading-text]').button(isDisabled ? 'loading' : 'reset');
         }
         jqElement2.toggleClass('disabled', isDisabled)
-            .filter('input, button, select, md-checkbox, md-select, textarea, md-radio-button, md-switch')
+            .filter('input, button, select, md-checkbox, md-select, textarea, md-radio-button, md-switch, md-autocomplete')
             .attr('disabled', isDisabled);
     };
     RcDisabledProvider.prototype.onDisable = function (customHandler) {

@@ -1,19 +1,22 @@
+
+webcam.$inject = ['$rootScope'];var Webcam = require('webcamjs');
 var WebcamConfig = (function () {
     function WebcamConfig() {
     }
     return WebcamConfig;
 })();
-function webcam() {
+function webcam($rootScope) {
     'ngInject';
     return {
         restrict: 'A',
         scope: {
+            webcam: '=webcam',
             width: '@webcamWidth',
             height: '@webcamHeight',
             cropWidth: '@webcamCropWidth',
             cropHeight: '@webcamCropHeight',
             onLive: '&webcamOnLive',
-            onError: '&webcamOnError',
+            onError: '&webcamOnError'
         },
         link: function (scope, element, attrs, ngModelCtrl) {
             var elementRaw = element[0];
@@ -34,19 +37,30 @@ function webcam() {
                 config.crop_height = parseInt(scope.cropHeight);
             }
             Webcam.on('live', function (error) {
-                if (scope.onLive()) {
-                    scope.$apply(function () {
-                        scope.onLive()();
-                    });
+                if (scope.onLive) {
+                    if ($rootScope.$$phase) {
+                        scope.onLive(error);
+                    }
+                    else {
+                        $rootScope.$apply(function () {
+                            scope.onLive(error);
+                        });
+                    }
                 }
             });
             Webcam.on('error', function (error) {
-                if (scope.onError()) {
-                    scope.$apply(function () {
-                        scope.onError()(error);
-                    });
+                if (scope.onError) {
+                    if ($rootScope.$$phase) {
+                        scope.onError(error);
+                    }
+                    else {
+                        $rootScope.$apply(function () {
+                            scope.onError(error);
+                        });
+                    }
                 }
             });
+            scope.webcam = Webcam;
             Webcam.set(config);
             Webcam.attach(elementRaw);
         }

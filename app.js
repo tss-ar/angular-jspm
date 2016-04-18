@@ -2,9 +2,11 @@ var directives = require('./directives');
 var components = require('./components');
 var tssHighlight_1 = require('./filters/tssHighlight');
 var servicies = require('./servicies');
+require('./templates');
 angular.module('TSS.AngularJs', [
     'ui.bootstrap.dateparser',
-    'ui.bootstrap.position'
+    'ui.bootstrap.position',
+    'tss-angular.templates'
 ])
     .directive('datepickerPopup', directives.datepickerPopup)
     .directive('datetimepicker', directives.datetimepicker)

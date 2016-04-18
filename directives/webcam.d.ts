@@ -1,6 +1,7 @@
-export declare function webcam(): {
+export declare function webcam($rootScope: any): {
     restrict: string;
     scope: {
+        webcam: string;
         width: string;
         height: string;
         cropWidth: string;

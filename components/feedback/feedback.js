@@ -4,7 +4,7 @@ function feedback() {
     return {
         restrict: 'AE',
         require: 'ngModel',
-        templateUrl: '/components/feedback/feedback.html',
+        templateUrl: '/tss-angular/components/feedback/feedback.html',
         scope: {
             feedback: '=ngModel'
         },

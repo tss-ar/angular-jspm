@@ -3,7 +3,7 @@ function sort() {
     return {
         restrict: 'A',
         transclude: true,
-        templateUrl: '/components/sort/sort.html',
+        templateUrl: '/tss-angular/components/sort/sort.html',
         scope: {
             column: '=',
             sortingcolumn: '=',
