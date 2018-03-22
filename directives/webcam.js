@@ -1,5 +1,5 @@
 
-webcam.$inject = ['$rootScope'];var Webcam = require('../libs/webcam');
+webcam.$inject = ['$rootScope'];var Webcam = require('webcamjs');
 var WebcamConfig = (function () {
     function WebcamConfig() {
     }
