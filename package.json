@@ -1,6 +1,6 @@
 {
   "name": "tss-angular-jspm",
-  "version": "0.7.0",
+  "version": "0.9.1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,12 +10,9 @@
   "main": "index.js",
   "format": "cjs",
   "registry": "jspm",
-  "devDependencies": {
-  },
-  "dependencies": {
-  },
-
-    "typescript": {
-        "definition": "index.d.ts"
-    }
+  "devDependencies": {},
+  "dependencies": {},
+  "typescript": {
+    "definition": "index.d.ts"
+  }
 }
