@@ -15,7 +15,7 @@ function tssHighlight() {
         if (split) {
             querySplit = query.split(' ');
         }
-        var result = matchItem;
+        var result = matchItem.replace(/</g, '&lt;').replace(/>/, '&gt;');
         for (var i = 0; i < querySplit.length; i++) {
             result = ('' + result).replace(new RegExp(querySplit[i], 'gi'), '<>$&</>');
         }
