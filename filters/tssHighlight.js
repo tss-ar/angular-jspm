@@ -7,20 +7,28 @@ function tssHighlight() {
         if (!matchItem) {
             return matchItem;
         }
+      
+        var result = matchItem.replace(/</g, '&lt;').replace(/>/, '&gt;');
+       
         if (!query) {
-            return matchItem;
+            return result;
         }
+      
         query = escapeRegexp(query);
+      
         var querySplit = [query];
+      
         if (split) {
             querySplit = query.split(' ');
         }
-        var result = matchItem.replace(/</g, '&lt;').replace(/>/, '&gt;');
+      
         for (var i = 0; i < querySplit.length; i++) {
             result = ('' + result).replace(new RegExp(querySplit[i], 'gi'), '<>$&</>');
         }
+      
         result = result.replace(new RegExp('<>', 'gi'), '<span class="tss-highlight-match">');
         result = result.replace(new RegExp('</>', 'gi'), '</span>');
+     
         return result;
     };
 }
